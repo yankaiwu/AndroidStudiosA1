@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/frameHorizontal"
+    android:paddingRight="@dimen/frameHorizontal"
+    android:paddingTop="@dimen/frameVertical"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/shoppingAppLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150sp"
+        android:scaleX="3"
+        android:scaleY="3"
+        android:src="@drawable/normal_rabbit"/>
+
+    <TextView
+        android:id="@+id/usernameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shoppingAppLogo"
+        android:layout_marginTop="100sp"
+        android:textSize="@dimen/bodyText"
+        android:text="@string/loginUser" />
+
+    <EditText
+        android:id="@+id/usernameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameText"
+        android:layout_marginTop="5sp"
+        android:textSize="@dimen/bodyText"
+        android:inputType="textNoSuggestions"/>
+
+    <TextView
+        android:id="@+id/passwordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameInput"
+        android:layout_marginTop="20sp"
+        android:textSize="@dimen/bodyText"
+        android:text="@string/loginPass" />
+
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordText"
+        android:layout_marginTop="5sp"
+        android:textSize="@dimen/bodyText"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/passwordInput"
+        android:layout_marginTop="20sp"
+        android:text="@string/loginButtonText"
+        android:textStyle="bold"
+        android:textSize="@dimen/bodyText"/>
+
+</RelativeLayout>

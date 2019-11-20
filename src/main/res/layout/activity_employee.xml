@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/frameHorizontal"
+    android:paddingRight="@dimen/frameHorizontal"
+    android:paddingTop="@dimen/frameVertical"
+    tools:context=".EmployeeActivity">
+
+    <TextView
+        android:id="@+id/employeeHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30sp"
+        android:text="@string/employeeHeader"
+        android:textSize="@dimen/headingText"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/employeeHeader"
+        android:layout_marginTop="50sp"
+        android:text="@string/welcomeText"
+        android:textSize="@dimen/headingText" />
+
+
+    <Button
+        android:id="@+id/addUserButton"
+        android:layout_width="200sp"
+        android:layout_height="50sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/welcomeText"
+        android:layout_marginTop="150sp"
+        android:text="@string/addUser"
+        android:textSize="@dimen/bodyText"/>
+
+    <Button
+        android:id="@+id/addEmployeeButton"
+        android:layout_width="200sp"
+        android:layout_height="50sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/addUserButton"
+        android:layout_marginTop="80sp"
+        android:text="@string/addEmployee"
+        android:textSize="@dimen/bodyText"/>
+
+    <Button
+        android:id="@+id/updateInventoryButton"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/addEmployeeButton"
+        android:layout_marginTop="80sp"
+        android:text="@string/updateInventory"
+        android:textSize="@dimen/bodyText"/>
+
+    <Button
+        android:id="@+id/logOutButton"
+        android:layout_width="200sp"
+        android:layout_height="50sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/updateInventoryButton"
+        android:layout_marginTop="150sp"
+        android:text="@string/logOutText"
+        android:textSize="@dimen/bodyText"/>
+
+</RelativeLayout>

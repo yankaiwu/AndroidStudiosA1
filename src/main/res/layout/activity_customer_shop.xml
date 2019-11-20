@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/frameHorizontal"
+    android:paddingRight="@dimen/frameHorizontal"
+    android:paddingTop="@dimen/frameVertical"
+    tools:context=".CustomerShopActivity">
+
+    <TextView
+        android:id="@+id/customerShopHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/shopHeader"
+        android:textSize="@dimen/headingText"/>
+
+    <ListView
+        android:id="@+id/shopListView"
+        android:layout_width="match_parent"
+        android:layout_height="300sp"
+        android:layout_alignTop="@id/customerShopHeader"
+        android:layout_marginTop="50sp"/>
+
+    <TextView
+        android:id="@+id/itemInputText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/shopListView"
+        android:layout_marginTop="310sp"
+        android:text="@string/itemInput"
+        android:textSize="@dimen/bodyText"/>
+
+    <EditText
+        android:id="@+id/itemInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/itemInputText"
+        android:layout_marginTop="20sp"
+        android:textSize="@dimen/bodyText"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/quantityInputText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/itemInput"
+        android:layout_marginTop="50sp"
+        android:text="@string/quantityInput"
+        android:textSize="@dimen/bodyText"/>
+
+    <EditText
+        android:id="@+id/quantityInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/quantityInputText"
+        android:layout_marginTop="20sp"
+        android:textSize="@dimen/bodyText"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/addToCartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/quantityInput"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="45sp"
+        android:text="@string/addItemButton"
+        android:textSize="@dimen/bodyText"/>
+
+    <Button
+        android:id="@+id/shopExitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/shopListView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="490sp"
+        android:text="@string/returnText"
+        android:textSize="@dimen/bodyText"/>
+
+</RelativeLayout>

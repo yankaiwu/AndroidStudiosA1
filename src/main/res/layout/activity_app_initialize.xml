@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/frameHorizontal"
+    android:paddingRight="@dimen/frameHorizontal"
+    android:paddingTop="@dimen/frameVertical"
+    tools:context=".AppInitializeActivity">
+
+    <TextView
+        android:id="@+id/appStartUpText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30sp"
+        android:text="@string/appStartUp"
+        android:textSize="@dimen/headingText" />
+
+    <Button
+        android:id="@+id/createAdminButton"
+        android:layout_width="220sp"
+        android:layout_height="50sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/appStartUpText"
+        android:layout_marginTop="150sp"
+        android:text="@string/createAdmin"
+        android:textSize="@dimen/bodyText"/>
+
+    <Button
+        android:id="@+id/createEmployeeButton"
+        android:layout_width="220sp"
+        android:layout_height="50sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/createAdminButton"
+        android:layout_marginTop="80sp"
+        android:text="@string/createEmployee"
+        android:textSize="@dimen/bodyText"/>
+
+    <Button
+        android:id="@+id/goToLoginButton"
+        android:layout_width="220sp"
+        android:layout_height="50sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/createEmployeeButton"
+        android:layout_marginTop="150sp"
+        android:text="@string/goToLogin"
+        android:textSize="@dimen/bodyText"/>
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">ShoppingApplication</string>
+
+    <string name="appStartUp">START UP</string>
+    <string name="createAdmin">Create Admin</string>
+    <string name="createEmployee">Create Employee</string>
+    <string name="goToLogin">Go to Login</string>
+
+    <string name="loginUser">Username</string>
+    <string name="loginPass">Password</string>
+    <string name="loginButtonText">LOGIN</string>
+
+    <string name="adminHeader">ADMIN</string>
+    <string name="employeeHeader">EMPLOYEE</string>
+    <string name="addUser">Add User</string>
+    <string name="addEmployee">Add Employee</string>
+    <string name="updateInventory">Update Inventory</string>
+    <string name="promoteEmployee">Promote Employee</string>
+
+    <string name="welcomeText">Welcome, USER!</string>
+    <string name="viewCartText">View Cart</string>
+    <string name="browseShopText">Browse Shop</string>
+    <string name="logOutText">Log Out</string>
+
+    <string name="cartHeader">Your Cart</string>
+    <string name="itemName1">Apple</string>
+    <string name="itemQuantity1">15</string>
+    <string name="itemName2">Orange</string>
+    <string name="itemQuantity2">12</string>
+    <string name="addItemSymbol">+</string>
+    <string name="removeItemSymbol">-</string>
+    <string name="totalPrice">Total = $7.39</string>
+    <string name="checkOut">Check Out</string>
+    <string name="returnText">Exit</string>
+
+    <string name="shopHeader">Shop</string>
+    <string name="addItemButton">Add to Cart</string>
+    <string name="itemInput">Item:</string>
+    <string name="quantityInput">Quantity:</string>
+
+</resources>
