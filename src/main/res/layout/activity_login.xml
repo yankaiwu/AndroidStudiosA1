@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150sp"
+        android:layout_marginTop="120sp"
         android:scaleX="3"
         android:scaleY="3"
         android:src="@drawable/normal_rabbit"/>
@@ -55,6 +55,7 @@
         android:inputType="textPassword"/>
 
     <Button
+        android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="50sp"
         android:layout_centerInParent="true"
@@ -62,6 +63,15 @@
         android:layout_marginTop="20sp"
         android:text="@string/loginButtonText"
         android:textStyle="bold"
-        android:textSize="@dimen/bodyText"/>
+        android:textSize="@dimen/bodyText" />
+
+    <TextView
+        android:id="@+id/loginFailed"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/loginButton"
+        android:textSize="@dimen/bodyText"
+        android:textColor="@color/colorAccent"/>
 
 </RelativeLayout>

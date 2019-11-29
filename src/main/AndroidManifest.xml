@@ -14,8 +14,12 @@
         <activity android:name=".EmployeeActivity" />
         <activity android:name=".CustomerShopActivity" />
         <activity android:name=".CustomerCartActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".CustomerActivity">
+        <activity android:name=".CustomerActivity" />
+        <activity android:name=".CreateUserPopUp"
+            android:theme="@style/AppTheme.PopUpTheme"></activity>
+        <activity android:name=".CreateEmployeePopUp"
+            android:theme="@style/AppTheme.PopUpTheme"></activity>
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
