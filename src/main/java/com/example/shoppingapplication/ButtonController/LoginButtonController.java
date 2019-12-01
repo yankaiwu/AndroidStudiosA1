@@ -12,6 +12,7 @@ import com.example.shoppingapplication.AdminActivity;
 import com.example.shoppingapplication.CustomerActivity;
 import com.example.shoppingapplication.EmployeeActivity;
 import com.example.shoppingapplication.R;
+import com.b07.*;
 
 public class LoginButtonController implements View.OnClickListener {
     private Context appContext;
@@ -28,6 +29,9 @@ public class LoginButtonController implements View.OnClickListener {
         TextView loginFailed = ((AppCompatActivity) appContext).findViewById(R.id.loginFailed);
         String username = editUser.getText().toString();
         String password = editPass.getText().toString();
+
+
+
         if (username.equalsIgnoreCase("customer")){
             intent = new Intent(this.appContext, CustomerActivity.class);
             appContext.startActivity(intent);
