@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/frameHorizontal"
+    android:paddingRight="@dimen/frameHorizontal"
+    android:paddingTop="@dimen/frameVertical"
+    tools:context=".CustomerActivity">
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30sp"
+        android:text="@string/welcomeText"
+        android:textSize="@dimen/headingText" />
+
+    <Button
+        android:id="@+id/viewCartButton"
+        android:layout_width="200sp"
+        android:layout_height="50sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/welcomeText"
+        android:layout_marginTop="150sp"
+        android:text="@string/viewCartText"
+        android:textSize="@dimen/bodyText"/>
+
+    <Button
+        android:id="@+id/browseShopButton"
+        android:layout_width="200sp"
+        android:layout_height="50sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/viewCartButton"
+        android:layout_marginTop="80sp"
+        android:text="@string/browseShopText"
+        android:textSize="@dimen/bodyText"/>
+
+    <Button
+        android:id="@+id/logOutButton"
+        android:layout_width="200sp"
+        android:layout_height="50sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/browseShopButton"
+        android:layout_marginTop="150sp"
+        android:text="@string/logOutText"
+        android:textSize="@dimen/bodyText"/>
+
+</RelativeLayout>
