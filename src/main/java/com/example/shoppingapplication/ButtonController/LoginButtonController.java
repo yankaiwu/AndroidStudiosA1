@@ -8,6 +8,10 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.b07.database.helper.DatabaseSelectHelper;
+import com.b07.exceptions.InvalidRoleException;
+import com.b07.exceptions.NullParameterException;
+import com.b07.exceptions.UserNotFoundException;
 import com.example.shoppingapplication.AdminActivity;
 import com.example.shoppingapplication.CustomerActivity;
 import com.example.shoppingapplication.EmployeeActivity;
@@ -28,17 +32,35 @@ public class LoginButtonController implements View.OnClickListener {
         TextView loginFailed = ((AppCompatActivity) appContext).findViewById(R.id.loginFailed);
         String username = editUser.getText().toString();
         String password = editPass.getText().toString();
-        if (username.equalsIgnoreCase("customer")){
-            intent = new Intent(this.appContext, CustomerActivity.class);
-            appContext.startActivity(intent);
-        } else if (username.equalsIgnoreCase("admin")){
-            intent = new Intent(this.appContext, AdminActivity.class);
-            appContext.startActivity(intent);
-        } else if (username.equalsIgnoreCase("employee")){
-            intent = new Intent(this.appContext, EmployeeActivity.class);
-            appContext.startActivity(intent);
+        int userId = Integer.parseInt(username);
+
+        if (DatabaseSelectHelper.UserIdExists(userId, appContext)) {
+            try {
+                if (DatabaseSelectHelper.getUserDetails(userId, appContext).authenticate(password, appContext)) {
+                    int userRole = DatabaseSelectHelper.getUserRoleId(userId, appContext);
+                    if (userRole == DatabaseSelectHelper.getRoleIdByName("ADMIN", appContext)) {
+                        intent = new Intent(this.appContext, AdminActivity.class);
+                        intent.putExtra("userId", userId);
+                        appContext.startActivity(intent);
+                    } else if (userRole == DatabaseSelectHelper.getRoleIdByName(
+                            "EMPLOYEE", appContext)) {
+                        intent = new Intent(this.appContext, EmployeeActivity.class);
+                        intent.putExtra("userId", userId);
+                        appContext.startActivity(intent);
+                    } else if (userRole == DatabaseSelectHelper.getRoleIdByName(
+                            "CUSTOMER", appContext)) {
+                        intent = new Intent(this.appContext, CustomerActivity.class);
+                        intent.putExtra("userId", userId);
+                        appContext.startActivity(intent);
+                    }
+                } else {
+                    loginFailed.setText("Wrong Password");
+                }
+            } catch (Exception e){
+                loginFailed.setText("Error");
+            }
         } else {
-            loginFailed.setText("Incorrect Username or Password");
+            loginFailed.setText("Wrong UserId");
         }
     }
 }

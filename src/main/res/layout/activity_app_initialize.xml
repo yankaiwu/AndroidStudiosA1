@@ -25,7 +25,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignTop="@id/appStartUpText"
         android:layout_marginTop="150sp"
-        android:text="@string/createAdmin"
+        android:text="@string/addAdmin"
         android:textSize="@dimen/bodyText"/>
 
     <Button
@@ -35,7 +35,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignTop="@id/createAdminButton"
         android:layout_marginTop="80sp"
-        android:text="@string/createEmployee"
+        android:text="@string/addEmployee"
         android:textSize="@dimen/bodyText"/>
 
     <Button
@@ -47,5 +47,15 @@
         android:layout_marginTop="150sp"
         android:text="@string/goToLogin"
         android:textSize="@dimen/bodyText"/>
+
+    <TextView
+        android:id="@+id/initializeErrorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/goToLoginButton"
+        android:layout_marginTop="70sp"
+        android:textSize="@dimen/bodyText"
+        android:textColor="@color/colorAccent" />
 
 </RelativeLayout>

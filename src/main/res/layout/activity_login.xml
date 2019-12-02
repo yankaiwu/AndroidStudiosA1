@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="120sp"
+        android:layout_marginTop="50sp"
         android:scaleX="3"
         android:scaleY="3"
         android:src="@drawable/normal_rabbit"/>
@@ -73,5 +73,6 @@
         android:layout_below="@id/loginButton"
         android:textSize="@dimen/bodyText"
         android:textColor="@color/colorAccent"/>
+
 
 </RelativeLayout>

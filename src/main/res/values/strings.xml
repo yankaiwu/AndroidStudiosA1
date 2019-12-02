@@ -2,8 +2,7 @@
     <string name="app_name">ShoppingApplication</string>
 
     <string name="appStartUp">START UP</string>
-    <string name="createAdmin">Create Admin</string>
-    <string name="createEmployee">Create Employee</string>
+    <string name="addAdmin">Add Admin</string>
     <string name="goToLogin">Go to Login</string>
 
     <string name="loginUser">Username</string>
@@ -40,6 +39,7 @@
 
     <string name="addUserHeading">Add User</string>
     <string name="addEmployeeHeading">Add Employee</string>
+    <string name="addAdminHeading">Add Admin</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="age">Age</string>

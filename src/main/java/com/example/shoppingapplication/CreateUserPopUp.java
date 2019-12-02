@@ -3,6 +3,10 @@ package com.example.shoppingapplication;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.widget.Button;
+
+import com.b07.database.helper.DatabaseSelectHelper;
+import com.example.shoppingapplication.ButtonController.CreateUserButtonController;
 
 public class CreateUserPopUp extends Activity {
 
@@ -17,5 +21,9 @@ public class CreateUserPopUp extends Activity {
         int height = dm.heightPixels;
 
         getWindow().setLayout((int)(width*.8), (int)(height*.8));
+
+        Button createButton = findViewById(R.id.createCustomerButton);
+        int CustomerRoleId = DatabaseSelectHelper.getRoleIdByName("Customer", this);
+        createButton.setOnClickListener(new CreateUserButtonController(this, CustomerRoleId));
     }
 }
